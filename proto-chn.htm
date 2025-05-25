@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://www.kaom.net/sgy_bzd.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>廣韻形聲考</title>
+    <meta name="description" content="">
+    <!--<base target="_blank">--><base href="." target="_blank">
+    <script type="text/javascript">
+        function checkAll(name) {
+            var el = document.getElementsByTagName('input');
+            var len = el.length;
+            for(var i=0; i<len; i++) {
+                if((el[i].type=="checkbox") && (el[i].name==name)) {
+                    el[i].checked = true;
+                }
+            }
+        }
+        function clearAll(name) {
+            var el = document.getElementsByTagName('input');
+            var len = el.length;
+            for(var i=0; i<len; i++) {
+                if((el[i].type=="checkbox") && (el[i].name==name)) {
+                    el[i].checked = false;
+                }
+            }
+        }
+        function checkAll2(name) {
+            var el = document.getElementsByClassName(name);
+            var len = el.length;
+            for(var i=0; i<len; i++) {
+                el[i].checked = true;
+            }
+        }
+        function clearAll2(name) {
+            var el = document.getElementsByClassName(name);
+            var len = el.length;
+            for(var i=0; i<len; i++) {
+                el[i].checked = false;
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        /* 下拉內容 */
+        .dropdown{
+            position:relative;
+            display:inline-block;
+            padding: 0px;
+            margin: 0px;
+        }
+        /* 下拉式功能表內容設置為隱藏 */
+        .dropdown-content{
+            width:120px;
+            background:#162436;
+            position:absolute;
+            right:0;
+            display:none;
+            box-shadow:0px 8px 15px 0px rgba(0,0,0,0.2);
+            z-index:100;
+        }
+        /* 下拉按鈕樣式 */
+        .dropbtn{
+            color:white;
+            font-size:13px;
+            padding: 13px 8px; /* 控制條紋高度重要 */
+            border:none;
+            background:#2a3c54;
+            cursor:pointer;
+        }
+        .dropbtn2{
+            color:white;
+            font-size:13px;
+            padding: 13px 8px; /* 控制條紋高度重要 */
+            border:none;
+            background:#aa334c;
+            cursor:pointer;
+        }
+        /* 下拉式功能表連結 */
+        .dropdown-content a{
+            color:white;
+            text-decoration:none;
+            padding:8px 20px;
+            display:block;
+            font-size: 12px;
+        }
+        /* 滑鼠移入後顯示下拉式功能表 */
+        .dropdown:hover .dropdown-content{
+            display:block;
+        }
+        /* 滑鼠移入後修改連結的背景色 */
+        .dropdown-content a:hover{
+            background:#aa334c;
+        }
+        /* 滑鼠移入背景色 */
+        .form_b:hover{
+            background:#ca334c;
+        }
+        /* 下拉式功能表顯示後修改下拉按鈕的背景色 */
+        .dropdown:hover .dropbtn{
+            background:#162436;
+        }
+        .dropdown:hover .dropbtn2{
+            background:#162436;
+        }
+        /*頁面上的橫條*/
+        .header{
+            background: #2a3c54;
+            width: 96%;
+            padding: 0px 2%;
+            margin: 0px auto;
+            text-align: right;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: KaiXinSong;
+            font-size: 15px;
+            background: #ddd;
+            -webkit-text-size-adjust:none;
+        }
+        .win{
+            max-width: 1200px;
+            margin:0px auto;
+            background: #fff;
+            box-shadow: darkgrey 0px 0px 6px 5px ;
+        }
+        table {
+            width:92%;
+            margin:50px auto;
+            border-collapse:collapse;
+            color: #000;
+            text-align: center;
+            vertical-align:center;
+            line-height: 22px;
+        }
+        th {
+            font-size:13px;
+            color: #ddd;
+            background: #2a3c54;
+            padding:5px 2px;
+            line-height: 16px;
+        }
+        td {
+            font-size:14px;
+            color: #333;
+            background: #eee;
+            border:1px solid #ddd;
+            /*word-wrap:break-word;強制換行*/
+            /*word-break:break-all;強制換行*/
+        }
+        caption{
+            color: #555;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        th.red{
+            background: #aa334c;
+            color: #fff;
+            width: 140px;
+        }
+        .table_mini{
+            width: 88%;
+        }
+        .td_footer{
+            height:20px;
+            background:#666;
+            color:#ccc;
+            font-size: 13px;
+        }
+        .table_mini td{
+            background: #f8f8f8;
+            font-size: 12px;
+        }
+
+        .form_1{
+            font-size: 14px;
+            height: 36px;
+            line-height: 36px;  /*垂直居中*/
+            border:1px solid #aaa;
+            padding: 0px 0px 0px 5px;
+            vertical-align:bottom;
+        }
+        .form_2{
+            background: #2a3c54;
+            color: #fff;
+            font-size: 14px;
+            width: 120px;
+            height: 38px;
+            line-height: 36px;   /*垂直居中*/
+            border:none;
+            vertical-align:bottom;
+        }
+        .form_2:hover{
+            background: #aa334c;
+            box-shadow:0px 3px 6px 0px rgba(0,0,0,0.2);
+        }
+
+        /*全選、清空按鈕*/
+        input[type="button"] {
+            height:22px;
+            width: 38px;
+            font-size: 12px;
+        }
+
+        /*以下4個是電子字樣式*/
+        .box_main{
+            margin: 50px auto 20px auto;
+            max-width:90%;
+            text-align: center;
+            width: 92%;
+        }
+        .box_div{
+            width: 60px;
+            height: 38px;
+            margin:5px;
+            padding: 12px 2px;
+            background: #2a3c54;
+            display: inline-block;
+            font-size: 32px;
+            color:#eee;
+            vertical-align: middle;
+            text-align: center;
+            line-height:22px;
+        }
+        .box_div_mini{
+            width: 25px;
+            height: 25px;
+            margin:2px;
+            padding: 2px 2px;
+            background: #2a3c54;
+            display: inline-block;
+            font-size: 18px;
+            color:#eee;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .box_div:hover,.box_div_mini:hover {
+            background: #aa334c;
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+        }
+        .right{
+            color:#aa334c;
+        }
+        .wrong{
+            color:#2a3c54;
+        }
+        .error{
+            text-align: center;
+            font-size: 13px;
+            margin: 45px auto 45px auto;
+            line-height: 20px;
+            background: #eee;
+            width: 500px;
+            padding: 20px 35px;
+            border-radius:5px;
+            color: #aa334c;
+            font-weight: bold;
+        }
+        .kuangjia {
+            background: #f8f8f8;
+            width: 96%;
+            text-align: center;
+            margin: 20px auto;
+            overflow: scroll
+        }
+        i{
+            font-size: 12px;
+            color: #888;
+            font-style: normal;
+        }
+        b{
+            font-size: 14px;
+            color: #aa334c;
+        }
+        td a:link,.link a:link {color:blue;text-decoration:none;}    /*未被訪問的連結*/
+        td a:visited,.link a:visited {color:blue;text-decoration:none;}     /*已被訪問的連結*/
+        td a:hover,.link a:hover {color:#aa334c;text-decoration:none;}    /*滑鼠指標移動到連結上*/
+        td a:active,.link a:active {color:#fff;text-decoration:none;}   /*正在被點擊的連結*/
+        a:link {text-decoration:none;}
+        a:visited {text-decoration:none;}
+        a:hover {text-decoration:none;}
+        a:active {text-decoration:none;}
+    </style>
+</head>
+<body>
+<div class="header">
+        <div style="float: left;text-align: right;margin-left: 10px">
+            <div class="dropdown">
+                <a href="http://www.kaom.net/index.php"><button type="button" class="dropbtn">返回首頁</button></a>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="dropbtn2">苗瑤語</button>
+                <div class="dropdown-content">
+                    <a href="http://www.kaom.net/min_z_hmongmien.php"><span style="color: orange">✿</span> 苗瑤語素</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="dropbtn2">侗台語</button>
+                <div class="dropdown-content">
+                    <a href="http://www.kaom.net/min_z_kamtai.php"><span style="color: orange">✿</span> 侗台語素</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="dropbtn2">漢藏語</button>
+                <div class="dropdown-content">
+                    <a href="http://www.kaom.net/min_z_zangs.php"><span style="color: orange">✿</span> 藏語素A</a>
+                    <a href="http://www.kaom.net/min_z_zang.php"><span style="color: orange">✿</span> 藏語素B</a>
+                    <a href="http://www.kaom.net/min_z_kang.php"><span style="color: orange">✿</span> 康語素</a>
+                    <a href="http://www.kaom.net/min_z_qiang.php"><span style="color: orange">✿</span> 羌語素</a>
+                    <a href="http://www.kaom.net/min_z_ni.php"><span style="color: orange">✿</span> 尼語素</a>
+                    <a href="http://www.kaom.net/min_z_bo.php"><span style="color: orange">✿</span> 僰語素</a>
+                    <a href="http://www.kaom.net/mat_word.php">附：詞彙查詢</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="dropbtn2">南亞語</button>
+                <div class="dropdown-content">
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php"><span style="color: orange">✿</span> 南亞語素</a>
+                    <a href="http://www.kaom.net/min_tree.php?t=austroasiatic"><span style="color: orange">✿</span> 關係樹</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic_family.php"><span style="color: orange">✿</span> 語支史</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xmonic">①孟語支</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xkhmerpear">②高棉語支</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xkhmerpear">③比爾語支</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xbahnaric">④巴那語支</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xkatuic">⑤卡都語支</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xvietic">⑥越語支</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xkhmuic">⑦克木語支</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xpalaungic">⑧崩龍語支</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xkhasian">⑨卡西語支</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xmanglai">⑩莽語支</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xmanglai">⑪倈語支</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xaslian">⑫愛麗語支</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xmundaic">⑬蒙達語支</a>
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php?t=xnicobaric">⑭尼科語支</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="dropbtn2">南島語</button>
+                <div class="dropdown-content">
+                    <a href="http://www.kaom.net/min_nandao.php">詞彙查詢</a>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="dropdown">
+        <button type="button" class="dropbtn">上古音</button>
+        <div class="dropdown-content">
+            <a href="http://www.kaom.net/yayuns_net.php">① 先秦韻</a>
+            <a href="http://www.kaom.net/sgy_xs.php">② 聲符</a>
+            <a href="http://www.kaom.net/sgy_jj_xilian.php">③ 假借</a>
+            <a href="http://www.kaom.net/sgy_yidu.php">④ 異讀</a>
+            <a href="http://www.kaom.net/sgy_shengxun.php">⑤ 聲訓</a>
+            <a href="http://www.kaom.net/sgy_fanhan.php">⑥ 梵漢</a>
+            <a href="http://www.kaom.net/sgy_xs_guilv.php">附：諧聲規律</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button type="button" class="dropbtn">構擬</button>
+        <div class="dropdown-content">
+            <a href="http://www.kaom.net/ny_word.php"><span style="color: orange">✿</span> 擬音查詢</a>
+            <a href="http://www.kaom.net/ny_contrast.php"><span style="color: orange">✿</span> 音系比較</a>
+            <a href="http://www.kaom.net/ny_yun.php"><span style="color: orange">✿</span> 韻部結構</a>
+            <a href="http://www.kaom.net/ny_x.php?name=gaobenhan">高本漢 1940</a>
+            <a href="http://www.kaom.net/ny_x.php?name=dongtonghe">董同龢 1944</a>
+            <a href="http://www.kaom.net/ny_x.php?name=wangli">王力 1957</a>
+            <a href="http://www.kaom.net/ny_x.php?name=lifanggui">李方桂 1971</a>
+            <a href="http://www.kaom.net/ny_x.php?name=zhoufagao">周法高 1973</a>
+            <a href="http://www.kaom.net/ny_x.php?name=sita_a">斯塔① 1989</a>
+            <a href="http://www.kaom.net/ny_x.php?name=sita_b">斯塔② 1989</a>
+            <a href="http://www.kaom.net/ny_x.php?name=sita_s">斯塔③ 1989</a>
+            <a href="http://www.kaom.net/ny_x.php?name=baiyiping">白一平 1992</a>
+            <a href="http://www.kaom.net/ny_x.php?name=zhengzhang">鄭張 2003</a>
+            <a href="http://www.kaom.net/ny_x.php?name=panwuyun">潘悟雲 2024</a>
+            <a href="http://www.kaom.net/ny_x.php?name=xusilai">許思萊 2008</a>
+            <a href="http://www.kaom.net/ny_x.php?name=jinlixin">金理新 2013</a>
+            <a href="http://www.kaom.net/ny_x.php?name=baisha">白-沙 2014</a>
+            <a href="http://www.kaom.net/ny_x.php?name=guoxiliang_biaogao">郭錫良 2018</a>
+
+        </div>
+    </div>
+    <div class="dropdown">
+        <button type="button" class="dropbtn">古文字</button>
+        <div class="dropdown-content">
+            <a href="http://www.kaom.net/jgw.php">甲骨字形庫</a>
+            <a href="http://www.kaom.net/jw.php">金文字形庫</a>
+            <a href="http://www.kaom.net/jianc.php"><span style="color: orange">✿</span> 楚簡字形庫</a>
+            <a href="http://www.kaom.net/swxz.php">小篆部件譜</a>
+            <a href="http://www.kaom.net/guwenzi_note.php">簡介</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button type="button" class="dropbtn">漢語地理</button>
+        <div class="dropdown-content">
+            <a href="http://www.kaom.net/si_word.php">單字查詢[圖]</a>
+            <a href="http://www.kaom.net/si_words.php">單字對比[圖]</a>
+            <a href="http://www.kaom.net/si_mid.php">音類查詢[圖]</a>
+            <a href="http://www.kaom.net/si_mids.php">音類對比[圖]</a>
+            <a href="http://www.kaom.net/si_goto.php">演化統計[圖]</a>
+            <a href="http://www.kaom.net/si_ci.php">詞彙地理[圖]</a>
+            <a href="http://www.kaom.net/si_x.php">音系</a>
+            <a href="http://www.kaom.net/si_history.php">古今演化</a>
+            <a href="http://www.kaom.net/si_many.php">批量查詢</a>
+            <a href="http://www.kaom.net/si_yuwaiyin.php">日韓越音</a>
+            <a href="http://www.kaom.net/si_evo.php">新老派音變</a>
+            <a href="http://www.kaom.net/si_ipa.php">音素統計</a>
+            <a href="http://www.kaom.net/si_net_ci.php">詞彙距離</a>
+            <a href="http://www.kaom.net/si_net_yin.php">語音距離</a>
+            <a href="http://www.kaom.net/si_time.php">分手表</a>
+            <a href="http://www.kaom.net/si_times.php">分手圖</a>
+            <a href="http://www.kaom.net/si_timex.php">內部縱深</a>
+            <a href="http://www.kaom.net/si_tree.php">關係樹</a>
+            <a href="http://www.kaom.net/dm_map.php"><span style="color: orange">✿</span> 地名·全國</a>
+            <a href="http://www.kaom.net/dm_ng.php"><span style="color: orange">✿</span> 地名·吳語</a>
+            <a href="http://www.kaom.net/si_about.php">簡介</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button type="button" class="dropbtn">▼ 工具書</button>
+        <div class="dropdown-content">
+            <a href="http://www.kaom.net/word.php">韻書38種</a>
+            <a href="http://www.kaom.net/book_xungu.php">訓詁32種</a>
+            <a href="http://www.kaom.net/book_vot.php">沙門10種</a>
+            <a href="http://www.kaom.net/book_jian.php">簡帛11種</a>
+            <a href="http://www.kaom.net/mzy_word.php">民族語15種</a>
+            <a href="http://www.kaom.net/book_jiajie.php">通假字12種</a>
+            <a href="http://www.kaom.net/book_hanyudacidian.php">漢語大詞典</a>
+            <a href="http://www.kaom.net/book_fangyandacidian.php">方言大詞典</a>
+            <a href="http://www.kaom.net/book_minqingwuyucidian.php">明清吳語詞典</a>
+            <a href="http://www.kaom.net/zgy_dw.php"><span style="color: orange">✿</span> 廣韻·集韻</a>
+            <a href="http://www.kaom.net/sgy_bzd.php"><span style="color: orange">✿</span> 廣韻形聲考</a>
+            <a href="http://www.kaom.net/sgy_jiyunshengxi.php"><span style="color: orange">✿</span> 集韻聲系</a>
+            <a href="http://www.kaom.net/zgy_ypcj.php">玉篇殘卷</a>
+            <a href="http://www.kaom.net/book_jjzg.php">經籍籑詁</a>
+            <a href="http://www.kaom.net/zgy_jdsw.php">經典釋文</a>
+            <a href="http://www.kaom.net/font_jianhua_hbz.php">簡化合併字表</a>
+            <a href="http://www.kaom.net/font_jianhua_txz.php">簡化同形字表</a>
+            <a href="http://www.kaom.net/font.php"><span style="color: orange">🔧</span> 部件輸入法</a>
+            <a href="http://www.kaom.net/tool.php"><span style="color: orange">🔧</span> 小功能</a>
+
+        </div>
+    </div>
+
+</div>
+
+<!--
+<div style="font-size: 12px;color: #888;margin: 0px auto 20px auto;text-align: center;background: #eee;padding: 5px 5%;">
+    提示：近來機器人較多、網站若有卡頓、請隔10分鐘後再試
+</div>
+-->
+
+
+
+<style>
+    table{
+        max-width: 820px;
+    }
+    td{
+        padding: 0px;
+    }
+    form{
+        display: inline-block;
+    }
+    td a:link {color:#fff;text-decoration:underline;}
+    td a:visited {color:#fff;text-decoration:underline;}
+    td a:hover {color:orangered;text-decoration:underline;}
+    td a:active {color:#fff;text-decoration:underline;}
+</style>
+
+<table style="margin: 50px auto;">
+    <tbody><tr>
+        <td style="background-image: url(img/qieyun_wanger5.jpg);background-size:100%">
+            <img src="./廣韻形聲考_files/guangyunxingshengkao.png" style="height:58px;margin: 88px auto 5px auto">
+            <div style="font-size: 13px">
+                <span style="color: #666;font-size: 13px">作者：布之道 （版本 2022.09.30）</span>
+            </div>
+            <div style="margin: 10px auto 138px auto;text-align: center;">
+                <form action="http://www.kaom.net/sgy_bzd8.php" method="post">
+                    <input type="word" name="word" value="" class="form_1" style="width:280px;height: 36px;color: #888">
+                    <select name="mode" class="form_1" style="height: 38px;width: 120px">
+                        <option value="word_no" selected="">查諧聲　</option>
+                        <option value="word_yes">查諧聲（含關係字）　</option>
+                        <option value="xieshengyu">查諧聲域　</option>
+                    </select>
+                    <input type="submit" name="wenzi" value="查 詢" class="form_2" style="height: 38px">
+                </form>
+
+                <button type="button" class="form_2" style="height: 38px; margin-left: 10px;" onclick="window.location.href='./table.htm'">查看全表</button>
+
+                <form action="http://www.kaom.net/sgy_bzd_table.php" method="post">
+                <input type="submit" value="全表" class="form_2" style="width: 50px;background: #aa334c">
+                </form>
+
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="background:#555;border-color:#ddd;color:#bbb;padding: 5px 5px;font-size: 12px;text-align: center">
+            本作品系我舊日所草成，囿於當時的見聞和學識，其中存在不少疏失，敬請讀者指正。（布之道微信：Xiao1291636825）
+        </td>
+    </tr>
+</tbody></table>
+
+
+
+<div style="margin: 30px auto;text-align: center;font-size: 12px;color: #888">
+    <img src="./廣韻形聲考_files/guyinxiaojings.png" style="height: 24px;margin-bottom: 5px">　
+    <div><a href="https://beian.miit.gov.cn/" style="color:#888;text-decoration:none">蘇ICP備17001294號</a> | 0.45MB 1.25MB 0.006s | 材料如有冒犯通知即刪</div>
+</div>
+
+
+
+
+
+
+
+
+</body></html>
